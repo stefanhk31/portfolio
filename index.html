@@ -1,72 +1,80 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./css/main.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
   <link rel="icon" href="shk-favicon.ico">
-  <title>Stefan Hodges-Kluck, Ph.D.</title>
+  <title>Stefan Hodges-Kluck</title>
 </head>
 
 <body>
 
   <div class="topnav" id="myTopnav">
-    <a href="#home">Stefan Hodges-Kluck, Ph.D.</a>
-    <a href="#about-me">About Me</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="javascript:void(0);" class="icon" onclick="mobileNav()">
-      <i class="fa fa-bars"></i>
-    </a>
+    <a href="#home">SHK</a>
+    <div class="topnav-menu">
+        <button id="menu-icon"><i class="fa fa-bars"></i></button>
+      <div class="topnav-sections">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about-me">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    
+
+
   </div>
-<section id="about-me" class="about-me-container">
-  <div class="about-me-photo">
-    <img id="my-photo" src="./img/stefan-photo.jpg">
-  </div>
-  <div class="about-me-text">
-      I am a front-end web developer with a passion for designing and building web pages and apps. My background as a historian (I earned my Ph.D. in 2017) has given me a keen interest in understanding people and culture. I use this interest, along with my knowledge of HTML, CSS, JavaScript, and React, to create products that offer the best user experience possible. 
-  </div>
-</section>
+
+  <section id="about-me">
+    <h2>Hello!</h2>
+    <div class="about-me-container">
+      <div class="about-me-text">
+        My name is Stefan Hodges-Kluck and I am a front-end web developer with a passion for designing and building web
+        pages and apps. My background as a historian (I earned my Ph.D. in 2017) has given me a keen interest in
+        understanding people and culture. I use this interest, along with my knowledge of HTML, CSS, JavaScript, and
+        React, to create products that offer the
+        best user experience possible.
+      </div>
+    </div>
+  </section>
 
   <section id="portfolio">
-      <h2>Portfolio</h2>
+    <h2>Case Studies</h2>
     <div class="portfolio-container">
       <figure class="portfolio-item">
-        <h3 class="portfolio-item-header">Product Landing Page</h3>
-        <a href="https://stefanhk31.github.io/automated-scribal-id/index.html"><img src="./img/asidp.jpg" class="sample-image"></a>
-        <figcaption>
-            A product landing page made for a client, using HTML, CSS, JavaScript, and PHP. <a href="#">Read more</a>.
-        </figcaption>
+        <a href="./product-landing-page.html"><img src="./img/asidp.jpg" class="sample-image"></a>
+        <h3 class="portfolio-item-header"><a href="./product-landing-page.html">Product Landing Page</a></h3>
       </figure>
       <figure class="portfolio-item">
-        <h3 class="portfolio-item-header">Pomodoro Clock</h3>
-        <a href="https://stefanhk31.github.io/pomodoro-clock/"><img src="./img/pomodoro.jpg" class="sample-image"></a>
-        <figcaption>
-            A running timer app with session and break modes, built with React and styled with Bootstrap. <a href="#">Read more</a>.
-        </figcaption>
+        <a href="./pomodoro-clock.html"><img src="./img/pomodoro.jpg" class="sample-image"></a>
+        <h3 class="portfolio-item-header"><a href="./pomodoro-clock.html">Pomodoro Clock</a></h3>
       </figure>
     </div>
 
-
-
-
-    <h2>Learn more about me on...</h2>
-    <footer class="media-container">
-      <a class="external-link" href="https://www.linkedin.com/in/stefanhk31"><i class="fab fa-linkedin-in" aria-hidden="true"></i>LinkedIn</a>
-      <a class="external-link" href="https://github.com/stefanhk31"><i class="fab fa-github" aria-hidden="true"></i></i>Github</a>
-      <a class="external-link" href="https://twitter.com/stefanhk31"><i class="fab fa-twitter" aria-hidden="true"></i>Twitter</a>
-    </footer>
-
-
+    <section id="contact">
+      <h2>Get in Touch</h2>
+      <div class="media-container">
+        <a class="external-link" href="https://www.linkedin.com/in/stefanhk31"><i class="fab fa-linkedin-in"
+            aria-hidden="true"></i></a>
+        <a class="external-link" href="https://github.com/stefanhk31"><i class="fab fa-github" aria-hidden="true"></i></i></a>
+        <a class="external-link" href="https://twitter.com/stefanhk31"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        <img id="my-photo" src="./img/stefan-photo.jpg">
+      </div>
+    </section>
+    <footer>Copyright 2019</footer>
 
     <script>
       function mobileNav() {
+        console.log("Hi, I'm a function!")
         var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
+        if (x.className === "topnav-sections") {
+          x.className += "-responsive";
         } else {
-          x.className = "topnav";
+          x.className = "topnav-sections";
         }
       }
     </script>
+
 </body>
 
 </html>

@@ -1,280 +1,321 @@
+/**** COLORS: 
+
+https://material.io/tools/color/#!/?view.left=1&view.right=0&primary.color=4DB6AC&secondary.color=BDBDBD
+
+****/
+
 /***BASE SETTINGS***/
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
   font-family: 'Heebo', sans-serif;
   font-size: 16px;
-  line-height: 1.6rem;
+  line-height: 2rem;
   background-color: #ffffff;
-  margin: 0px;
-}    
+  margin: 0;
+  padding: 0;
+}
 
 h2 {
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
-  color: #02285c;
+  color: #4db6ac;
   margin: 0;
+  padding: 5vw;
+  box-shadow: 0 4px 2px -2px #8d8d8d;
 }
 
 a {
-  color: black;
+  color: #4db6ac;
   text-decoration: none;
   font-weight: 600;
 }
 
 a:hover {
-  color: #00cbcc;
+  color: #8d8d8d;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 3vw;
+  font-weight: 900;
+}
 
 /***TOP NAVIGATION BAR***/
 
 .topnav {
-  background-color: #02285c;
-  border: 3px solid #757575;
-  border-radius: 0 0 15px 15px;
+  color: #4db6ac;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #bdbdbd;
+  box-shadow: 1px 1px #efefef;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: #ffffff;
-  text-align: center;
+  color: #4db6ac;
   padding: 14px 25px;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 400;
 }
 
+/*****TOPNAV MENU FOR MOBILE*****/
+
+#menu-icon {
+  padding: 22px 25px;
+  color: #4db6ac;
+  border: 0;
+  background-color: #ffffff;
+}
+
+.topnav-menu  {
+  position: relative;
+  display: inline-block;
+}
+
+.topnav-sections {
+  display: none;
+  position: absolute;
+  right: 1vw;
+  background-color: #ffffff;
+  border: 1px solid #bdbdbd;
+  box-shadow: 1px #efefef;
+  z-index: 1;
+}
+
+.topnav-sections a {
+  color: #000000;
+  display: block;
+}
+
 .topnav a:hover {
-  color: #00cbcc;
+  color: #ffffff;
+  background-color: #4db6ac;
 }
 
-.active {
-  background-color: #02285c;
-  color: white;
+.topnav-menu:hover .topnav-sections {
+  display: block;
 }
 
-.topnav .icon {
+.topnav-menu:hover #menu-icon {
+  color: #ffffff;
+  background-color: #4db6ac;
+}
+
+/*****ABOUT ME******/
+
+#about-me {
+  background-color: #efefef;
+  position: relative;
+  padding-top: 5vw;
+  border-top: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
+  box-shadow: 1px 1px #efefef;
+}
+
+.about-me-container {
+  display: flex;
+}
+
+.about-me-text {
+  font-size: 1.5rem;
+  margin: 5vw;
+  color: black;
+}
+
+/*******PORTFOLIO*****************/
+
+#portfolio {
+  position: relative;
+  margin: 5vw;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-item {
+  flex-direction: column;
+  align-self: center;
+  padding-bottom: 5vw;
+}
+
+.portfolio-item-header {
+  color: #4db6ac;
+  text-transform: uppercase;
+}
+
+.sample-image {
+  display: flex;
+  width: 90%;
+  border: 3px solid #8d8d8d;
+}
+
+.sample-image-fullpage {
+  display: flex;
+  margin: 3vw;
+  width: 90%;
+  border: 3px solid #8d8d8d;
+}
+
+/**************CONTACT*********/
+
+#contact {
+  background-color: #efefef;
+  margin: 0 -5vw;
+  padding: 5vw;
+  border-top: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
+  box-shadow: 1px 1px #efefef;
+}
+
+.media-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+.external-link {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  align-self: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: #4db6ac;
+  color: #ffffff;
+  padding: 2vw;
+  border: 3px solid #8d8d8d;
+  border-radius: 50%;
+}
+
+#my-photo {
   display: none;
 }
 
-  #about-me {
-      position: relative;
-      padding-top: 0;
-      margin: 5vw;
-  }
+/********CASE STUDY PAGE STYLING******/
 
-    .about-me-container {
-      display: flex;
-      flex-direction: row-reverse;
-  }
-
-    .about-me-text {
-      font-size: 1.5rem;
-      color: black;
-      width: 90vw;
-      flex: 2 0 100%;
-  }
-
-  .about-me-photo {
-    padding-left: 3vw;
-  }
-
-    #my-photo {
-      display: none;
-    }
-    
-    #portfolio {
-      position: relative;
-      margin: 5vw;
-    }
-
-    .portfolio-container { 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .portfolio-item {
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      font-size: 1.4rem;
-      padding-bottom: 5vw;
-    }
-
-    .portfolio-item-header {
-      font-size: 1.4rem;
-      text-align: center;
-    }
-
-    .sample-image {
-      display: flex;
-      width: 90%;
-      align-self: center;
-      margin: 0 0 1rem .5rem;
-      border: 3px solid #757575;
-      border-radius: 15px;
-    }
-    
-    .media-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin-top: 3vw;
-    }
-
-    .external-link {
-      display: flex;
-      flex-direction: column;
-      font-size: 1.5rem;
-      align-self: center;
-      align-items: center;
-      text-decoration: none;
-      background-color: #02285c;
-      color: #ffffff;
-      padding: 1vw;
-      border: 3px solid #757575;
-      border-radius: 15px;
-   }
-
-
-/*****MEDIA FOR MOBILE MENU******/
-
-@media screen and (max-width: 1000px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
+.h2-case-study {
+  background-color: #efefef;
 }
 
-@media screen and (max-width: 1000px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+.case-study {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border-bottom: 1px solid #bdbdbd;
+  box-shadow: 1px 1px #efefef;
+}
+
+.case-study-text {
+  margin: 3vw;
 }
 
 /*************TABLET PORTRAIT************/
-@media screen and (min-width: 600px) {
 
-.topnav a {
-  font-size: 1rem;
-  }  
-  
-  .sample-image {
-   margin: 0 0 1rem 2rem;
+@media screen and (min-width: 600px) {
+  #menu-icon {
+    display: none;
   }
-  
+  .topnav-sections {
+    display: flex;
+    flex-direction: row;
+    border: 0;
+  }
+  .topnav a {
+    font-size: 1rem;
+  }
+  .topnav-menu:hover .topnav-sections {
+    display: flex;
+  }
+  .portfolio-container {
+    flex-direction: row;
+  }
+  .portfolio-item {
+    flex-basis: 50%;
+  }
+  .sample-image {
+    height: 30%;
+  }
 }
 
 /**********TABLET LANDSCAPE****/
 
 @media screen and (min-width: 900px) {
-
-h2 {
-  font-size: 3rem;
-}
-
-.topnav a {
-  font-size: 1.2rem;
-}
-.about-me-text, .portfolio-item {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-}
-
-.portfolio-item-header {
-  font-size: 2.6rem;
-}
- 
-  .sample-image {
-    margin: 0 0 1rem 3rem;
+  h2 {
+    font-size: 3rem;
   }
-  
-   
+  .topnav a {
+    font-size: 1.2rem;
+  }
+  .about-me-text {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
 }
 
 /****************DESKTOP*******************/
 
 @media screen and (min-width: 1200px) {
-
-  .topnav {
-    background-color: #02285c;
-    width: fit-content;
-    border: 3px solid #757575;
-    border-radius: 0 0 15px 0;
+  body {
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
-
-
   .topnav a {
     font-size: 2rem;
     padding: 2vw;
-} 
-
-#my-photo {
-  display: flex;
-  border: 3px solid #757575;
-  border-radius: 15px;
-}
-
-.portfolio-container {
-  flex-direction: row;
-}
-
-.about-me-text {
-  flex: 1 0 50%;
-}
-
-
+  }
+  #my-photo {
+    display: flex;
+    border: 3px solid #757575;
+    border-radius: 50%;
+  }
+  .about-me-text {
+    line-height: 4rem;
+  }
+  .sample-image {
+    height: 40%;
+  }
 }
 
 /*************LARGER DESKTOPS******/
 
 @media screen and (min-width:1800px) {
- 
-.topnav a {
-  font-size: 3rem;
-  padding: 2vw;
-  margin: 10vw 0 0 0;
-}
-  
-h2 {
-      font-size: 5rem;
-      text-align: center;
-      color: #02285c;
+  .topnav a {
+    font-size: 3rem;
+    padding: 2vw;
   }
-  
-  .about-me-text, .portfolio-item {
+  h2 {
+    font-size: 5rem;
+  }
+  .about-me-text {
     font-size: 4rem;
-    line-height: 4rem;
+    line-height: 5rem;
   }
-
-.portfolio-item-header {
-  font-size: 4.5rem;
-}
-
-.sample-image {
-  width: 95%;
-}
-
-.external-link {
-  line-height: 4rem;
-  font-size: 4rem;
-}
-
-
+  .portfolio-item-header {
+    font-size: 4.5rem;
+  }
+  .sample-image {
+    width: 95%;
+  }
+  .external-link {
+    line-height: 4rem;
+    font-size: 4rem;
+  }
+  .case-study-text, footer {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 }
