@@ -1,1 +1,1 @@
-Professional portfolio. Built with HTML, CSS, and minimal JavaScript.
+Professional portfolio. Mobile-friendly, built entirely using HTML and CSS.
