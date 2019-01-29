@@ -1,10 +1,29 @@
-/**** COLORS: 
+/*****************************
+TABLE OF CONTENTS:
+  Body
+  Headers
+  Links
+  Footer
+Sections
+  Top Navigation Bar
+    Topnav Links
+    Topnav Menu
+    About Me
+    Portfolio
+    Contact
+Additional Pages
+  Case Study
 
-https://material.io/tools/color/#!/?view.left=1&view.right=0&primary.color=4DB6AC&secondary.color=BDBDBD
+****************************/
 
-****/
 
-/***BASE SETTINGS***/
+/******************************
+GLOBAL ELEMENTS
+*******************************/
+
+/******************************
+Body
+*******************************/
 
 body {
   display: flex;
@@ -18,6 +37,17 @@ body {
   padding: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+/******************************
+Headers
+*******************************/
+
 h2 {
   font-size: 2rem;
   text-align: center;
@@ -27,6 +57,21 @@ h2 {
   padding: 5vw;
   box-shadow: 0 4px 2px -2px #8d8d8d;
 }
+
+@media screen and (min-width: 900px) {
+  h2 {
+    font-size: 3rem;
+  }
+  @media screen and (min-width:1800px) {
+    h2 {
+      font-size: 5rem;
+    }
+  }
+}
+
+/******************************
+Links
+*******************************/
 
 a {
   color: #4db6ac;
@@ -38,6 +83,10 @@ a:hover {
   color: #8d8d8d;
 }
 
+/******************************
+Footer 
+*******************************/
+
 footer {
   display: flex;
   flex-direction: row;
@@ -46,7 +95,20 @@ footer {
   font-weight: 900;
 }
 
-/***TOP NAVIGATION BAR***/
+@media screen and (min-width:1800px) {
+  footer {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+/******************************
+SECTIONS
+*******************************/
+
+/******************************
+Top Navigation Bar
+*******************************/
 
 .topnav {
   color: #4db6ac;
@@ -58,6 +120,9 @@ footer {
   box-shadow: 1px 1px #efefef;
 }
 
+/******************************
+Topnav Links
+*******************************/
 .topnav a {
   color: #4db6ac;
   padding: 14px 25px;
@@ -66,7 +131,55 @@ footer {
   font-weight: 400;
 }
 
-/*****TOPNAV MENU FOR MOBILE*****/
+@media screen and (min-width: 600px) {
+  .topnav a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .topnav a {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .topnav a {
+    font-size: 2rem;
+    padding: 2vw;
+  }
+}
+
+@media screen and (min-width:1800px) {
+  .topnav a {
+    font-size: 3rem;
+    padding: 2vw;
+  }
+}
+
+.topnav a:hover {
+  color: #ffffff;
+  background-color: #4db6ac;
+}
+
+/******************************
+Topnav Menu (Dropdown for mobile, row for all other devices)
+*******************************/
+
+.topnav-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.topnav-menu:hover .topnav-sections {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .topnav-menu:hover .topnav-sections {
+    display: flex;
+  }
+}
 
 #menu-icon {
   padding: 22px 25px;
@@ -75,9 +188,10 @@ footer {
   background-color: #ffffff;
 }
 
-.topnav-menu  {
-  position: relative;
-  display: inline-block;
+@media screen and (min-width: 600px) {
+  #menu-icon {
+    display: none;
+  }
 }
 
 .topnav-sections {
@@ -90,17 +204,16 @@ footer {
   z-index: 1;
 }
 
+@media screen and (min-width: 600px) {
+  .topnav-sections {
+    display: flex;
+    flex-direction: row;
+    border: 0;
+  }
+}
+
 .topnav-sections a {
   color: #000000;
-  display: block;
-}
-
-.topnav a:hover {
-  color: #ffffff;
-  background-color: #4db6ac;
-}
-
-.topnav-menu:hover .topnav-sections {
   display: block;
 }
 
@@ -109,7 +222,9 @@ footer {
   background-color: #4db6ac;
 }
 
-/*****ABOUT ME******/
+/******************************
+About Me
+*******************************/
 
 #about-me {
   background-color: #efefef;
@@ -130,7 +245,29 @@ footer {
   color: black;
 }
 
-/*******PORTFOLIO*****************/
+@media screen and (min-width: 900px) {
+  .about-me-text {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-me-text {
+    line-height: 4rem;
+  }
+}
+
+@media screen and (min-width:1800px) {
+  .about-me-text {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
+
+/******************************
+Portfolio
+*******************************/
 
 #portfolio {
   position: relative;
@@ -143,10 +280,22 @@ footer {
   justify-content: center;
 }
 
+@media screen and (min-width: 600px) {
+  .portfolio-container {
+    flex-direction: row;
+  }
+}
+
 .portfolio-item {
   flex-direction: column;
   align-self: center;
   padding-bottom: 5vw;
+}
+
+@media screen and (min-width: 600px) {
+  .portfolio-item {
+    flex-basis: 50%;
+  }
 }
 
 .portfolio-item-header {
@@ -154,10 +303,34 @@ footer {
   text-transform: uppercase;
 }
 
+@media screen and (min-width:1800px) {
+  .portfolio-item-header {
+    font-size: 4.5rem;
+  }
+}
+
 .sample-image {
   display: flex;
   width: 90%;
   border: 3px solid #8d8d8d;
+}
+
+@media screen and (min-width: 600px) {
+  .sample-image {
+    height: 30%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sample-image {
+    height: 40%;
+  }
+}
+
+@media screen and (min-width:1800px) {
+  .sample-image {
+    width: 95%;
+  }
 }
 
 .sample-image-fullpage {
@@ -167,7 +340,10 @@ footer {
   border: 3px solid #8d8d8d;
 }
 
-/**************CONTACT*********/
+
+/******************************
+Contact
+*******************************/
 
 #contact {
   background-color: #efefef;
@@ -200,13 +376,33 @@ footer {
   border-radius: 50%;
 }
 
+@media screen and (min-width:1800px) {
+  .external-link {
+    line-height: 4rem;
+    font-size: 4rem;
+  }
+}
+
 #my-photo {
   display: none;
 }
 
-/********CASE STUDY PAGE STYLING******/
+@media screen and (min-width: 1200px) {
+  #my-photo {
+    display: flex;
+    border: 3px solid #757575;
+    border-radius: 50%;
+  }
+}
 
-.h2-case-study {
+/******************************
+ADDITIONAL PAGES
+*******************************/
+
+/******************************
+Case Study
+*******************************/
+.case-study-header {
   background-color: #efefef;
 }
 
@@ -223,98 +419,8 @@ footer {
   margin: 3vw;
 }
 
-/*************TABLET PORTRAIT************/
-
-@media screen and (min-width: 600px) {
-  #menu-icon {
-    display: none;
-  }
-  .topnav-sections {
-    display: flex;
-    flex-direction: row;
-    border: 0;
-  }
-  .topnav a {
-    font-size: 1rem;
-  }
-  .topnav-menu:hover .topnav-sections {
-    display: flex;
-  }
-  .portfolio-container {
-    flex-direction: row;
-  }
-  .portfolio-item {
-    flex-basis: 50%;
-  }
-  .sample-image {
-    height: 30%;
-  }
-}
-
-/**********TABLET LANDSCAPE****/
-
-@media screen and (min-width: 900px) {
-  h2 {
-    font-size: 3rem;
-  }
-  .topnav a {
-    font-size: 1.2rem;
-  }
-  .about-me-text {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-  }
-}
-
-/****************DESKTOP*******************/
-
-@media screen and (min-width: 1200px) {
-  body {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  .topnav a {
-    font-size: 2rem;
-    padding: 2vw;
-  }
-  #my-photo {
-    display: flex;
-    border: 3px solid #757575;
-    border-radius: 50%;
-  }
-  .about-me-text {
-    line-height: 4rem;
-  }
-  .sample-image {
-    height: 40%;
-  }
-}
-
-/*************LARGER DESKTOPS******/
-
 @media screen and (min-width:1800px) {
-  .topnav a {
-    font-size: 3rem;
-    padding: 2vw;
-  }
-  h2 {
-    font-size: 5rem;
-  }
-  .about-me-text {
-    font-size: 4rem;
-    line-height: 5rem;
-  }
-  .portfolio-item-header {
-    font-size: 4.5rem;
-  }
-  .sample-image {
-    width: 95%;
-  }
-  .external-link {
-    line-height: 4rem;
-    font-size: 4rem;
-  }
-  .case-study-text, footer {
+  .case-study-text {
     font-size: 3rem;
     line-height: 3rem;
   }
