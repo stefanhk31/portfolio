@@ -157,7 +157,7 @@ Topnav Links
   }
 }
 
-.topnav a:hover {
+.topnav a:active {
   color: #ffffff;
   background-color: #4db6ac;
 }
