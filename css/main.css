@@ -157,7 +157,7 @@ Topnav Links
   }
 }
 
-.topnav a:active {
+.topnav a:hover {
   color: #ffffff;
   background-color: #4db6ac;
 }
@@ -172,7 +172,8 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
 }
 
 .topnav-menu:hover .topnav-sections {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 600px) {
