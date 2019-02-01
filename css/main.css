@@ -192,7 +192,7 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
 }
 
 @media screen and (min-width: 600px) {
-  #menu-icon {
+  .menu-icon {
     display: none;
   }
 }

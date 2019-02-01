@@ -13,11 +13,11 @@ document.write( '  </div>' );
 
 //Toggle menu display on small screens
 function dropdownToggle() {
-    var dropdown = document.getElementsByClassName('topnav-sections')[0];
-    dropdown.classList.toggle('topnav-sections_ToggleShow')
-
-    var icon = document.getElementsByClassName('menu-icon')[0];
-    icon.classList.toggle('menu-icon_Toggle')
+        var dropdown = document.getElementsByClassName('topnav-sections')[0];
+        dropdown.classList.toggle('topnav-sections_ToggleShow')
+    
+        var icon = document.getElementsByClassName('menu-icon')[0];
+        icon.classList.toggle('menu-icon_Toggle')
 }
 
 document.querySelector('.menu-icon')
