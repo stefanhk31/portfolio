@@ -171,22 +171,24 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
   display: inline-block;
 }
 
-.topnav-menu:hover .topnav-sections {
-  display: flex;
-  flex-direction: column;
-}
 
 @media screen and (min-width: 600px) {
-  .topnav-menu:hover .topnav-sections {
+  .topnav-sections {
     display: flex;
+    flex-direction: row;
   }
 }
 
-#menu-icon {
+.menu-icon {
   padding: 22px 25px;
   color: #4db6ac;
   border: 0;
   background-color: #ffffff;
+}
+
+.menu-icon_Toggle {
+  color: #ffffff;
+  background-color: #4db6ac;
 }
 
 @media screen and (min-width: 600px) {
@@ -205,6 +207,11 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
   z-index: 1;
 }
 
+.topnav-sections_ToggleShow {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (min-width: 600px) {
   .topnav-sections {
     display: flex;
@@ -215,10 +222,11 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
 
 .topnav-sections a {
   color: #000000;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
-.topnav-menu:hover #menu-icon {
+.topnav-sections a:hover {
   color: #ffffff;
   background-color: #4db6ac;
 }
