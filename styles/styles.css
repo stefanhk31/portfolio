@@ -2,6 +2,7 @@
 TABLE OF CONTENTS:
 VARIABLES:
   Colors
+  Structure
 GLOBAL ELEMENTS:
     Body
     Headers
@@ -24,6 +25,9 @@ VARIABLES
 /**************************
 Colors
 ***************************/
+/*************************
+Structure
+**************************/
 /******************************
 GLOBAL ELEMENTS
 *******************************/
@@ -37,7 +41,7 @@ body {
   font-family: "Heebo", sans-serif;
   font-size: 16px;
   line-height: 2rem;
-  background-color: white;
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -108,7 +112,7 @@ Top Navigation Bar
 *******************************/
 .topnav {
   color: #4db6ac;
-  background-color: white;
+  background-color: #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -126,7 +130,7 @@ Top Navigation Bar
   font-weight: 400;
 }
 .topnav a :hover {
-  color: white;
+  color: #ffffff;
   background-color: #4db6ac;
 }
 @media screen and (min-width: 600px) {
@@ -161,7 +165,7 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
   flex-direction: column;
 }
 .topnav :hover {
-  color: white;
+  color: #ffffff;
   background-color: #4db6ac;
 }
 .topnav .topnav-menu {
@@ -172,13 +176,13 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
   display: none;
   position: absolute;
   right: 1vw;
-  background-color: white;
+  background-color: #ffffff;
   border: 1px solid #bdbdbd;
   box-shadow: 1px #efefef;
   z-index: 1;
 }
 .topnav .topnav-menu .topnav-sections a {
-  color: black;
+  color: #000000;
 }
 .topnav .topnav-menu .topnav-sections :hover {
   color: #ffffff;
@@ -198,7 +202,7 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
   padding: 22px 25px;
   color: #4db6ac;
   border: 0;
-  background-color: white;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 600px) {
   .topnav .topnav-menu .menu-icon {
@@ -206,7 +210,7 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
   }
 }
 .topnav .topnav-menu .menu-icon_Toggle {
-  color: white;
+  color: #ffffff;
   background-color: #4db6ac;
 }
 
@@ -227,7 +231,7 @@ About Me
 #about-me .about-me-container .about-me-text {
   font-size: 1.5rem;
   margin: 5vw;
-  color: black;
+  color: #000000;
 }
 @media screen and (min-width: 900px) {
   #about-me .about-me-container .about-me-text {
@@ -332,7 +336,7 @@ Contact
   align-items: center;
   text-decoration: none;
   background-color: #4db6ac;
-  color: white;
+  color: #ffffff;
   padding: 2vw;
   border: 3px solid #8d8d8d;
   border-radius: 50%;

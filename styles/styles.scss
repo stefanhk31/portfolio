@@ -2,6 +2,7 @@
 TABLE OF CONTENTS:
 VARIABLES:
   Colors
+  Structure
 GLOBAL ELEMENTS:
     Body
     Headers
@@ -31,6 +32,17 @@ $header_teal: #4db6ac;
 $dark_gray: #8d8d8d;
 $med_gray: #bdbdbd;
 $light_gray: #efefef;
+$white: #ffffff;
+$black: #000000;
+
+/*************************
+Structure
+**************************/
+
+$query_small: 600px;
+$query_medium: 900px;
+$query_large: 1200px;
+$query_xlarge: 1800px;
 
 /******************************
 GLOBAL ELEMENTS
@@ -47,11 +59,11 @@ body {
   font-family: 'Heebo', sans-serif;
   font-size: 16px;
   line-height: 2rem;
-  background-color: white;
+  background-color: $white;
   margin: 0;
   padding: 0;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $query_large) {
     font-size: 2rem;
     line-height: 2.5rem;
   }
@@ -70,10 +82,10 @@ h2 {
   padding: 5vw;
   box-shadow: 0 4px 2px -2px $dark_gray;
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: $query_medium) {
     font-size: 3rem;
   }
-  @media screen and (min-width:1800px) {
+  @media screen and (min-width: $query_xlarge) {
     font-size: 5rem;
   }
 }
@@ -104,7 +116,7 @@ footer {
   padding-top: 3vw;
   font-weight: 900;
 
-  @media screen and (min-width:1800px) {
+  @media screen and (min-width:$query_xlarge) {
     font-size: 3rem;
     line-height: 3rem;
   }
@@ -120,7 +132,7 @@ Top Navigation Bar
 
 .topnav {
   color: $header_teal;
-  background-color: white;
+  background-color: $white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -137,24 +149,24 @@ Topnav Links
     font-weight: 400;
 
     :hover {
-      color: white;
+      color: $white;
       background-color: $header_teal;
     }
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $query_small) {
       font-size: 1rem;
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: $query_medium) {
       font-size: 1.2rem;
     }
     
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $query_large) {
       font-size: 2rem;
       padding: 2vw;
     }
 
-    @media screen and (min-width:1800px) {
+    @media screen and (min-width:$query_xlarge) {
       font-size: 3rem;
       padding: 2vw;
     }
@@ -173,7 +185,7 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
   }
 
   :hover {
-    color: white;
+    color: $white;
     background-color: $header_teal;
   }
 
@@ -185,20 +197,20 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
       display: none;
       position: absolute;
       right: 1vw;
-      background-color: white;
+      background-color: $white;
       border: 1px solid $med_gray;
       box-shadow: 1px $light_gray;
       z-index: 1;
   
       a {
-        color: black;
+        color: $black;
       }
   
       :hover {
-        color: #ffffff;
+        color: $white;
       }
   
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: $query_small) {
         display: flex;
         flex-direction: row;
         border: 0;
@@ -214,15 +226,15 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
       padding: 22px 25px;
       color: $header_teal;
       border: 0;
-      background-color: white;
+      background-color: $white;
   
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: $query_small) {
         display: none;
       }
     }
   
     .menu-icon_Toggle {
-      color: white;
+      color: $white;
       background-color: $header_teal;
     }
   }
@@ -247,18 +259,18 @@ About Me
     .about-me-text {
       font-size: 1.5rem;
       margin: 5vw;
-      color: black;
+      color: $black;
 
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: $query_medium) {
         font-size: 2.5rem;
         line-height: 3.5rem;
       }
 
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: $query_large) {
         line-height: 4rem;
       }
 
-      @media screen and (min-width:1800px) {
+      @media screen and (min-width:$query_xlarge) {
         font-size: 4rem;
         line-height: 5rem;
       }
@@ -279,7 +291,7 @@ Portfolio
     flex-direction: column;
     justify-content: center;
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: $query_small) {
       flex-direction: row;
     }
     .portfolio-item {
@@ -287,7 +299,7 @@ Portfolio
       align-self: center;
       padding-bottom: 5vw;
 
-      @media screen and (min-width: 600px) {
+      @media screen and (min-width: $query_small) {
         flex-basis: 50%;
       }
       .portfolio-item-header {
@@ -297,7 +309,7 @@ Portfolio
             color: $dark_gray;
           }
 
-          @media screen and (min-width:1800px) {
+          @media screen and (min-width:$query_xlarge) {
             font-size: 4.5rem;
           }
 
@@ -307,15 +319,15 @@ Portfolio
           width: 90%;
           border: 3px solid $dark_gray;
           
-          @media screen and (min-width: 600px) {
+          @media screen and (min-width: $query_small) {
             height: 30%;
           }
 
-          @media screen and (min-width: 1200px) {
+          @media screen and (min-width: $query_large) {
             height: 40%;
           }
         
-          @media screen and (min-width:1800px) {
+          @media screen and (min-width:$query_xlarge) {
             width: 95%;
         }
       }
@@ -350,12 +362,12 @@ Contact
       align-items: center;
       text-decoration: none;
       background-color: $header_teal;
-      color: white;
+      color: $white;
       padding: 2vw;
       border: 3px solid $dark_gray;
       border-radius: 50%;
 
-      @media screen and (min-width:1800px) {
+      @media screen and (min-width:$query_xlarge) {
         line-height: 4rem;
         font-size: 4rem;
       }
@@ -369,7 +381,7 @@ Contact
     #my-photo {
       display: none;
 
-      @media screen and (min-width: 1200px) {
+      @media screen and (min-width: $query_large) {
         display: flex;
         border: 3px solid $dark_gray;
         border-radius: 50%;
@@ -408,7 +420,7 @@ Case Study
   .case-study-text {
     margin: 3vw;
     
-    @media screen and (min-width:1800px) {
+    @media screen and (min-width:$query_xlarge) {
       font-size: 3rem;
       line-height: 3rem;
     }
