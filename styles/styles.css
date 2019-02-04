@@ -1,5 +1,7 @@
 /*****************************
 TABLE OF CONTENTS:
+VARIABLES:
+  Colors
 GLOBAL ELEMENTS:
     Body
     Headers
@@ -16,6 +18,12 @@ ADDITIONAL PAGES:
   Case Study
 
 ****************************/
+/***************************
+VARIABLES
+***************************/
+/**************************
+Colors
+***************************/
 /******************************
 GLOBAL ELEMENTS
 *******************************/
@@ -170,7 +178,7 @@ Topnav Menu (Dropdown for mobile, row for all other devices)
   z-index: 1;
 }
 .topnav .topnav-menu .topnav-sections a {
-  color: #000000;
+  color: black;
 }
 .topnav .topnav-menu .topnav-sections :hover {
   color: #ffffff;
@@ -269,6 +277,9 @@ Portfolio
 #portfolio .portfolio-container .portfolio-item .portfolio-item-header {
   color: #4db6ac;
 }
+#portfolio .portfolio-container .portfolio-item .portfolio-item-header a:hover {
+  color: #8d8d8d;
+}
 @media screen and (min-width: 1800px) {
   #portfolio .portfolio-container .portfolio-item .portfolio-item-header {
     font-size: 4.5rem;
@@ -331,6 +342,9 @@ Contact
     line-height: 4rem;
     font-size: 4rem;
   }
+}
+#contact .media-container a:hover {
+  color: #8d8d8d;
 }
 #contact .media-container #my-photo {
   display: none;
