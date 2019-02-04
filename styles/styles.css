@@ -1,42 +1,38 @@
 /*****************************
 TABLE OF CONTENTS:
-  Body
-  Headers
-  Links
-  Footer
-Sections
-  Top Navigation Bar
+GLOBAL ELEMENTS:
+    Body
+    Headers
+    Links
+    Footer
+SECTIONS:
+    Top Navigation Bar
     Topnav Links
     Topnav Menu
     About Me
     Portfolio
     Contact
-Additional Pages
+ADDITIONAL PAGES:
   Case Study
 
 ****************************/
-
-
 /******************************
 GLOBAL ELEMENTS
 *******************************/
-
 /******************************
 Body
 *******************************/
-
 body {
   display: flex;
   flex-direction: column;
   position: relative;
-  font-family: 'Heebo', sans-serif;
+  font-family: "Heebo", sans-serif;
   font-size: 16px;
   line-height: 2rem;
-  background-color: #ffffff;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
-
 @media screen and (min-width: 1200px) {
   body {
     font-size: 2rem;
@@ -47,7 +43,6 @@ body {
 /******************************
 Headers
 *******************************/
-
 h2 {
   font-size: 2rem;
   text-align: center;
@@ -57,36 +52,32 @@ h2 {
   padding: 5vw;
   box-shadow: 0 4px 2px -2px #8d8d8d;
 }
-
 @media screen and (min-width: 900px) {
   h2 {
     font-size: 3rem;
   }
-  @media screen and (min-width:1800px) {
-    h2 {
-      font-size: 5rem;
-    }
+}
+@media screen and (min-width: 1800px) {
+  h2 {
+    font-size: 5rem;
   }
 }
 
 /******************************
 Links
 *******************************/
-
 a {
   color: #4db6ac;
   text-decoration: none;
   font-weight: 600;
 }
-
-a:hover {
+a :hover {
   color: #8d8d8d;
 }
 
 /******************************
 Footer 
 *******************************/
-
 footer {
   display: flex;
   flex-direction: row;
@@ -94,8 +85,7 @@ footer {
   padding-top: 3vw;
   font-weight: 900;
 }
-
-@media screen and (min-width:1800px) {
+@media screen and (min-width: 1800px) {
   footer {
     font-size: 3rem;
     line-height: 3rem;
@@ -105,24 +95,21 @@ footer {
 /******************************
 SECTIONS
 *******************************/
-
 /******************************
 Top Navigation Bar
 *******************************/
-
 .topnav {
   color: #4db6ac;
-  background-color: #ffffff;
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid #bdbdbd;
   box-shadow: 1px 1px #efefef;
+  /******************************
+  Topnav Links
+  *******************************/
 }
-
-/******************************
-Topnav Links
-*******************************/
 .topnav a {
   color: #4db6ac;
   padding: 14px 25px;
@@ -130,111 +117,94 @@ Topnav Links
   font-size: 1rem;
   font-weight: 400;
 }
-
+.topnav a :hover {
+  color: white;
+  background-color: #4db6ac;
+}
 @media screen and (min-width: 600px) {
   .topnav a {
     font-size: 1rem;
   }
 }
-
 @media screen and (min-width: 900px) {
   .topnav a {
     font-size: 1.2rem;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .topnav a {
     font-size: 2rem;
     padding: 2vw;
   }
 }
-
-@media screen and (min-width:1800px) {
+@media screen and (min-width: 1800px) {
   .topnav a {
     font-size: 3rem;
     padding: 2vw;
   }
 }
 
-.topnav a:hover {
-  color: #ffffff;
-  background-color: #4db6ac;
-}
-
 /******************************
 Topnav Menu (Dropdown for mobile, row for all other devices)
 *******************************/
-
-.topnav-menu {
+.topnav a {
+  color: #4db6ac;
+  display: flex;
+  flex-direction: column;
+}
+.topnav :hover {
+  color: white;
+  background-color: #4db6ac;
+}
+.topnav .topnav-menu {
   position: relative;
   display: inline-block;
 }
-
-
-@media screen and (min-width: 600px) {
-  .topnav-sections {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-.menu-icon {
-  padding: 22px 25px;
-  color: #4db6ac;
-  border: 0;
-  background-color: #ffffff;
-}
-
-.menu-icon_Toggle {
-  color: #ffffff;
-  background-color: #4db6ac;
-}
-
-@media screen and (min-width: 600px) {
-  .menu-icon {
-    display: none;
-  }
-}
-
-.topnav-sections {
+.topnav .topnav-menu .topnav-sections {
   display: none;
   position: absolute;
   right: 1vw;
-  background-color: #ffffff;
+  background-color: white;
   border: 1px solid #bdbdbd;
   box-shadow: 1px #efefef;
   z-index: 1;
 }
-
-.topnav-sections_ToggleShow {
-  display: flex;
-  flex-direction: column;
+.topnav .topnav-menu .topnav-sections a {
+  color: #000000;
 }
-
+.topnav .topnav-menu .topnav-sections :hover {
+  color: #ffffff;
+}
 @media screen and (min-width: 600px) {
-  .topnav-sections {
+  .topnav .topnav-menu .topnav-sections {
     display: flex;
     flex-direction: row;
     border: 0;
   }
 }
-
-.topnav-sections a {
-  color: #000000;
+.topnav .topnav-menu .topnav-sections_ToggleShow {
   display: flex;
   flex-direction: column;
 }
-
-.topnav-sections a:hover {
-  color: #ffffff;
+.topnav .topnav-menu .menu-icon {
+  padding: 22px 25px;
+  color: #4db6ac;
+  border: 0;
+  background-color: white;
+}
+@media screen and (min-width: 600px) {
+  .topnav .topnav-menu .menu-icon {
+    display: none;
+  }
+}
+.topnav .topnav-menu .menu-icon_Toggle {
+  color: white;
   background-color: #4db6ac;
 }
 
 /******************************
 About Me
 *******************************/
-
 #about-me {
   background-color: #efefef;
   position: relative;
@@ -243,32 +213,27 @@ About Me
   border-bottom: 1px solid #bdbdbd;
   box-shadow: 1px 1px #efefef;
 }
-
-.about-me-container {
+#about-me .about-me-container {
   display: flex;
 }
-
-.about-me-text {
+#about-me .about-me-container .about-me-text {
   font-size: 1.5rem;
   margin: 5vw;
   color: black;
 }
-
 @media screen and (min-width: 900px) {
-  .about-me-text {
+  #about-me .about-me-container .about-me-text {
     font-size: 2.5rem;
     line-height: 3.5rem;
   }
 }
-
 @media screen and (min-width: 1200px) {
-  .about-me-text {
+  #about-me .about-me-container .about-me-text {
     line-height: 4rem;
   }
 }
-
-@media screen and (min-width:1800px) {
-  .about-me-text {
+@media screen and (min-width: 1800px) {
+  #about-me .about-me-container .about-me-text {
     font-size: 4rem;
     line-height: 5rem;
   }
@@ -277,83 +242,62 @@ About Me
 /******************************
 Portfolio
 *******************************/
-
 #portfolio {
   position: relative;
   margin: 5vw;
 }
-
-.portfolio-container {
+#portfolio .portfolio-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 @media screen and (min-width: 600px) {
-  .portfolio-container {
+  #portfolio .portfolio-container {
     flex-direction: row;
   }
 }
-
-.portfolio-item {
+#portfolio .portfolio-container .portfolio-item {
   flex-direction: column;
   align-self: center;
   padding-bottom: 5vw;
 }
-
 @media screen and (min-width: 600px) {
-  .portfolio-item {
+  #portfolio .portfolio-container .portfolio-item {
     flex-basis: 50%;
   }
 }
-
-.portfolio-item-header {
+#portfolio .portfolio-container .portfolio-item .portfolio-item-header {
   color: #4db6ac;
-  text-transform: uppercase;
 }
-
-@media screen and (min-width:1800px) {
-  .portfolio-item-header {
+@media screen and (min-width: 1800px) {
+  #portfolio .portfolio-container .portfolio-item .portfolio-item-header {
     font-size: 4.5rem;
   }
 }
-
-.sample-image {
+#portfolio .portfolio-container .portfolio-item .sample-image {
   display: flex;
   width: 90%;
   border: 3px solid #8d8d8d;
 }
-
 @media screen and (min-width: 600px) {
-  .sample-image {
+  #portfolio .portfolio-container .portfolio-item .sample-image {
     height: 30%;
   }
 }
-
 @media screen and (min-width: 1200px) {
-  .sample-image {
+  #portfolio .portfolio-container .portfolio-item .sample-image {
     height: 40%;
   }
 }
-
-@media screen and (min-width:1800px) {
-  .sample-image {
+@media screen and (min-width: 1800px) {
+  #portfolio .portfolio-container .portfolio-item .sample-image {
     width: 95%;
   }
 }
 
-.sample-image-fullpage {
-  display: flex;
-  margin: 3vw;
-  width: 90%;
-  border: 3px solid #8d8d8d;
-}
-
-
 /******************************
 Contact
 *******************************/
-
 #contact {
   background-color: #efefef;
   margin: 0 -5vw;
@@ -362,16 +306,14 @@ Contact
   border-bottom: 1px solid #bdbdbd;
   box-shadow: 1px 1px #efefef;
 }
-
-.media-container {
+#contact .media-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 3vw;
   padding-bottom: 3vw;
 }
-
-.external-link {
+#contact .media-container .external-link {
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
@@ -379,27 +321,24 @@ Contact
   align-items: center;
   text-decoration: none;
   background-color: #4db6ac;
-  color: #ffffff;
+  color: white;
   padding: 2vw;
   border: 3px solid #8d8d8d;
   border-radius: 50%;
 }
-
-@media screen and (min-width:1800px) {
-  .external-link {
+@media screen and (min-width: 1800px) {
+  #contact .media-container .external-link {
     line-height: 4rem;
     font-size: 4rem;
   }
 }
-
-#my-photo {
+#contact .media-container #my-photo {
   display: none;
 }
-
 @media screen and (min-width: 1200px) {
-  #my-photo {
+  #contact .media-container #my-photo {
     display: flex;
-    border: 3px solid #757575;
+    border: 3px solid #8d8d8d;
     border-radius: 50%;
   }
 }
@@ -407,14 +346,9 @@ Contact
 /******************************
 ADDITIONAL PAGES
 *******************************/
-
 /******************************
 Case Study
 *******************************/
-.case-study-header {
-  background-color: #efefef;
-}
-
 .case-study {
   display: flex;
   flex-direction: column;
@@ -423,14 +357,23 @@ Case Study
   border-bottom: 1px solid #bdbdbd;
   box-shadow: 1px 1px #efefef;
 }
-
-.case-study-text {
+.case-study .case-study-header {
+  background-color: #efefef;
+}
+.case-study .sample-image-fullpage {
+  display: flex;
+  margin: 3vw;
+  width: 90%;
+  border: 3px solid #8d8d8d;
+}
+.case-study .case-study-text {
   margin: 3vw;
 }
-
-@media screen and (min-width:1800px) {
-  .case-study-text {
+@media screen and (min-width: 1800px) {
+  .case-study .case-study-text {
     font-size: 3rem;
     line-height: 3rem;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
