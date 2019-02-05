@@ -296,17 +296,18 @@ Portfolio
 }
 @media screen and (min-width: 600px) {
   #portfolio .portfolio-container .portfolio-item .sample-image {
-    height: 30%;
+    height: 20%;
   }
 }
 @media screen and (min-width: 1200px) {
   #portfolio .portfolio-container .portfolio-item .sample-image {
-    height: 40%;
+    height: 25%;
   }
 }
 @media screen and (min-width: 1800px) {
   #portfolio .portfolio-container .portfolio-item .sample-image {
     width: 95%;
+    height: 30%;
   }
 }
 
