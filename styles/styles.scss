@@ -318,18 +318,9 @@ Portfolio
           display: flex;
           width: 90%;
           border: 3px solid $dark_gray;
-          
-          @media screen and (min-width: $query_small) {
-            height: 20%;
-          }
-
-          @media screen and (min-width: $query_large) {
-            height: 25%;
-          }
         
           @media screen and (min-width:$query_xlarge) {
             width: 95%;
-            height: 30%;
         }
       }
     }

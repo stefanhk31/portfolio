@@ -294,20 +294,9 @@ Portfolio
   width: 90%;
   border: 3px solid #8d8d8d;
 }
-@media screen and (min-width: 600px) {
-  #portfolio .portfolio-container .portfolio-item .sample-image {
-    height: 20%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  #portfolio .portfolio-container .portfolio-item .sample-image {
-    height: 25%;
-  }
-}
 @media screen and (min-width: 1800px) {
   #portfolio .portfolio-container .portfolio-item .sample-image {
     width: 95%;
-    height: 30%;
   }
 }
 
