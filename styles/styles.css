@@ -116,6 +116,7 @@ Top Navigation Bar
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 1px solid #bdbdbd;
   border-bottom: 1px solid #bdbdbd;
   box-shadow: 1px 1px #efefef;
   /******************************
